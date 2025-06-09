@@ -1,10 +1,19 @@
 {
-  "name": "aifortiori",
+  "name": "ai-fortiori",
   "version": "1.0.0",
+  "description": "AI Fortiori - Disciplined Use of Unnatural Language in Legal Thinking",
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "your-repository-url"
+  },
+  "author": "Dr Jason Harkess",
+  "license": "MIT"
 }

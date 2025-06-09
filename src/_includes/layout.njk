@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Fortiori - Disciplined Use of Unnatural Language in Legal Thinking">
   <style>
     body {
       font-family: "Century Schoolbook", Georgia, serif;
@@ -11,16 +12,123 @@
       color: #f0f0f0;
       line-height: 1.6;
       padding: 2rem;
+      margin: 0;
     }
-    h1 { font-size: 2.5rem; border-bottom: 1px solid #888; }
-    a { color: #9cf; }
-    footer { margin-top: 4rem; border-top: 1px solid #444; padding-top: 1rem; font-size: 0.9rem; text-align: center; }
+    
+    /* Default styles for non-homepage pages */
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1 { 
+      font-size: 2.5rem; 
+      border-bottom: 1px solid #888; 
+      margin-bottom: 1.5rem;
+    }
+    
+    h2 { 
+      font-size: 2rem; 
+      color: #d4af37;
+      margin-top: 2rem;
+    }
+    
+    h3 { 
+      font-size: 1.5rem; 
+      color: #9cf;
+    }
+    
+    a { 
+      color: #9cf; 
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: #d4af37;
+    }
+    
+    blockquote {
+      border-left: 4px solid #d4af37;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #cccccc;
+    }
+    
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    
+    pre {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border-left: 4px solid #004080;
+    }
+    
+    footer { 
+      margin-top: 4rem; 
+      border-top: 1px solid #444; 
+      padding-top: 1rem; 
+      font-size: 0.9rem; 
+      text-align: center; 
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+    
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      color: #e6c34a;
+    }
+    
+    /* Navigation styles for future use */
+    .site-nav {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .site-nav a {
+      margin: 0 1rem;
+      color: #9cf;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .site-nav a:hover {
+      color: #d4af37;
+    }
   </style>
 </head>
 <body>
-  {{ content | safe }}
+  {% if title == "AI Fortiori" %}
+    <!-- Homepage gets full treatment -->
+    {{ content | safe }}
+  {% else %}
+    <!-- Other pages get wrapped in content wrapper -->
+    <div class="content-wrapper">
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/cases/">Cases</a>
+        <a href="/newsletter/">Newsletter</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      {{ content | safe }}
+    </div>
+  {% endif %}
+  
   <footer>
-    &copy; 2025 Dr Jason Harkess · <a href="/">Home</a>
+    &copy; 2025 Dr Jason Harkess · <a href="/">AI Fortiori</a> · 
+    <a href="/cases/">Cases</a> · 
+    <a href="/newsletter/">Newsletter</a> · 
+    <a href="https://substack.com" target="_blank">Subscribe</a>
   </footer>
 </body>
 </html>
