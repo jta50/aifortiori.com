@@ -6,7 +6,7 @@ title: AI Fortiori
 <style>
   /* Homepage-specific styles that override layout defaults */
   body {
-    background: url('/images/logo.png') !important;
+    background: url('/images/library-background.jpg') !important;
 background-size: cover !important;
 background-position: center !important;
     padding: 0 !important;
@@ -14,6 +14,7 @@ background-position: center !important;
     min-height: 100vh !important;
     overflow-x: hidden !important;
   }
+
   .homepage-container {
     position: relative;
     min-height: calc(100vh - 100px);
