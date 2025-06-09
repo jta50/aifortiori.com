@@ -15,7 +15,6 @@ title: AI Fortiori
     min-height: 100vh !important;
     overflow-x: hidden !important;
   }
-
   .homepage-container {
     position: relative;
     min-height: calc(100vh - 100px);
@@ -316,19 +315,19 @@ title: AI Fortiori
       flex-direction: column;
       align-items: center;
     }
-
+    
     .logo {
       max-width: 220px;
     }
-
+    
     .features-grid {
       grid-template-columns: 1fr;
     }
-
+    
     .section-title {
       font-size: 2rem;
     }
-
+    
     .content-section, .recent-section {
       padding: 3rem 1rem;
     }
@@ -343,9 +342,10 @@ title: AI Fortiori
         <img src="/images/logo.png" alt="AI Fortiori" class="logo-image">
       </div>
       <h1 class="main-title">AI FORTIORI</h1>
-      <p class="tagline">Disciplined Use of Unnatural Language in Legal Thinking</p>
+      <p class="tagline">Doctrine, Data, Discipline</p>
     </div>
-    
+
+
     <div class="cta-buttons">
       <a href="/cases/" class="cta-button primary">Case Summaries</a>
       <a href="/newsletter/" class="cta-button">Newsletter</a>
@@ -358,10 +358,11 @@ title: AI Fortiori
   <!-- Content Section -->
   <section class="content-section">
     <div class="container">
-      <h2 class="section-title">Our Approach</h2>
-      
+      <h2 class="section-title">About</h2>
+
+
       <blockquote class="intro-quote">
-        A digital resource exploring how legal reasoning meets large language models, crafted by a lawyer obsessed with clarity, precedent, and pedagogy.
+        <strong style="font-style: normal;">AI Fortiori</strong> is a digital resource for lawyers, legal academics, and students of law — grounded in legal tradition, attuned to the modern world, and shaped by the meeting of human judgment and machine intelligence, where insight is forged through disciplined design.
       </blockquote>
       
       <div class="features-grid">
@@ -392,7 +393,7 @@ title: AI Fortiori
   <section class="recent-section">
     <div class="container">
       <h2 class="section-title">Recent Case Analysis</h2>
-      
+
       <ul class="case-list">
         {% for post in collections.cases | reverse | slice: 0, 5 %}
         <li class="case-item">
