@@ -6,7 +6,7 @@ title: AI Fortiori
 <style>
   /* Homepage-specific styles that override layout defaults */
   body {
-    background: url('/images/library-background.jpg') !important;
+    background: url('/images/library-background2.jpeg') !important;
 background-size: cover !important;
 background-position: center !important;
     padding: 0 !important;
