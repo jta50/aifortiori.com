@@ -1,6 +1,10 @@
 {% extends "layout.njk" %}
 
 {% block content %}
+<pre style="background: #222; color: #9cf; padding: 1rem; border: 1px solid #444;">
+CASE DEBUG DUMP:
+{{ case | dump }}
+</pre>
 <div class="case-frame">
   <h1>{{ case.case_identification.case_name_full }}</h1>
   <p><strong>Citation:</strong> {{ case.case_identification.full_citation }}</p>
