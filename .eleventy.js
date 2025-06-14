@@ -1,13 +1,16 @@
 module.exports = function(eleventyConfig) {
-  // Copy images folder to output
+  // Copy assets
   eleventyConfig.addPassthroughCopy("src/images");
-  
-  // Copy any CSS files if you have them
   eleventyConfig.addPassthroughCopy("src/css");
-  
-  // Watch for changes in images during development
+
+  // Watch folders
   eleventyConfig.addWatchTarget("src/images");
-  
+
+  // ✅ Add case collection
+  eleventyConfig.addCollection("cases", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/cases/*.md");
+  });
+
   return {
     dir: {
       input: "src",
