@@ -1,0 +1,70 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="case-frame">
+  <h1>{{ case.case_identification.case_name_full }}</h1>
+  <p><strong>Citation:</strong> {{ case.case_identification.full_citation }}</p>
+  <p><strong>Court:</strong> {{ case.case_identification.court_information.court_name }}</p>
+  <p><strong>Date:</strong> {{ case.case_identification.decision_date }}</p>
+
+  <hr>
+
+  <h2>Factual Summary</h2>
+  <p>{{ case.factual_foundation.factual_summary }}</p>
+
+  <h2>Key Facts</h2>
+  <ul>
+    {% for fact in case.factual_foundation.material_facts %}
+      <li>{{ fact.fact_statement }}<br><em>{{ fact.legal_significance }}</em></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Legal Issue</h2>
+  <p>{{ case.legal_issues.primary_issue }}</p>
+
+  {% if case.legal_issues.subsidiary_issues %}
+  <h3>Subsidiary Issues</h3>
+  <ul>
+    {% for issue in case.legal_issues.subsidiary_issues %}
+      <li>{{ issue }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <h2>Legal Principles</h2>
+  <ul>
+    {% for p in case.principle_extraction.ratio_decidendi %}
+      <li><strong>{{ p.legal_principle }}</strong><br><em>{{ p.supporting_quotation }}</em></li>
+    {% endfor %}
+  </ul>
+
+  <a href="/cases/">← Back to all cases</a>
+</div>
+
+<style>
+.case-frame {
+  background: url("/images/ornate-border.png") no-repeat center;
+  background-size: contain;
+  padding: 2rem;
+  margin: auto;
+  max-width: 1000px;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.02);
+}
+@media (max-width: 600px) {
+  .case-frame {
+    padding: 1rem;
+    background-size: cover;
+    width: 100%;
+  }
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+  p, li {
+    font-size: 0.95rem;
+  }
+}
+</style>
+{% endblock %}
