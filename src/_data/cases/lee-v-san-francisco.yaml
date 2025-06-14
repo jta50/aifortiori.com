@@ -1,0 +1,18 @@
+case_identification:
+  case_name_full: "Anna Lee v City of San Francisco"
+  case_name_short: "Lee v San Francisco"
+  citations:
+    primary_citation: "2024 Cal. App. Unpub. LEXIS 2345"
+  court_information:
+    court_name: "California Court of Appeal, First District"
+  temporal_framework:
+    case_timeline:
+      judgment_delivery_date: "2024-09-21"
+factual_foundation:
+  factual_summary: "Anna Lee sued the City of San Francisco after tripping on a damaged sidewalk. The court held that the city was not liable due to immunity provisions for minor defects."
+legal_issues:
+  primary_issue: "Whether a city can be held liable for injuries from minor sidewalk defects."
+principle_extraction:
+  ratio_decidendi:
+    - legal_principle: "Minor sidewalk defects fall under municipal immunity."
+      supporting_quotation: "Trivial defect doctrine shields municipalities from liability."

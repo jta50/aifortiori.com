@@ -1,0 +1,18 @@
+case_identification:
+  case_name_full: "James Smith v Delta Airlines, Inc"
+  case_name_short: "Smith v Delta"
+  citations:
+    primary_citation: "2023 U.S. Dist. LEXIS 10234"
+  court_information:
+    court_name: "United States District Court for the Northern District of Georgia"
+  temporal_framework:
+    case_timeline:
+      judgment_delivery_date: "2023-05-12"
+factual_foundation:
+  factual_summary: "James Smith filed a suit after being denied boarding due to alleged overbooking. He claimed breach of contract and discrimination. The court found in favor of Delta citing compliance with federal guidelines."
+legal_issues:
+  primary_issue: "Whether denial of boarding due to overbooking constituted a breach of contract."
+principle_extraction:
+  ratio_decidendi:
+    - legal_principle: "Airlines may deny boarding when compliant with FAA overbooking policies."
+      supporting_quotation: "Compliance with federal regulation negates breach of implied contractual terms."
